@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-color: firebrick;
+    --main-color: white;
+    --accent-color: #D89090;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+/*
+Home page styles
+*/
+
+#nav-logo1 {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+#nav-logo2 {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    opacity: 0;
+}
+
+#nav-logo2:hover {
+    opacity: 1;
+}
+
+nav {
+    background-color: var(--main-color);
+    width: 10%;
+    height: 100vh;
+    position: fixed;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    text-align: right;
+}
+
+nav a {
+    font-family: "Rubik", sans-serif;
+    font-size: 2vw;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: var(--text-color);
+    color: var(--main-color);
+}
+
+#home-section {
+    margin-left: 10%;
+}
+
+#home-section h1 {
+    font-family: "Rubik", sans-serif;
+    font-size: 7vh;
+    text-align: center;
+    line-height: 2;
+    color: var(--text-color);
+}
+
+#about-section h1,
+#music-section h1,
+#dance-section h1,
+#design-section h1 {
+    font-family: "Rubik", sans-serif;
+    font-size: 6vh;
+    text-align: center;
+    line-height: 2;
+    color: var(--text-color);
+}
+
+#music-producer-text {
+    animation-name: introText;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-out;
+}
+
+#choreographer-text {
+    animation-name: introText;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-out;
+}
+
+#web-designer-text {
+    animation-name: introText;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes introText {
+    0% {
+        transform: translateY(10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+#intro-section {
+    background-color: var(--main-color);
+    height: 50vh;
+    align-content: center;
+}
+
+#links-section {
+    background-color: var(--text-color);
+    display: flex;
+    height: 50vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+i {
+    color: var(--accent-color);
+    padding: 20px 0 20px 0;
+    transition: 0.2s;
+}
+
+i:hover {
+    transform: scale(1.2);
+    color: var(--main-color);
+}
+
+/*
+About page styles
+*/
+
+#about-section,
+#music-section,
+#dance-section,
+#design-section {
+    margin-left: 10%;
+}
+
+.first-text {
+    animation-name: introText;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-out;
+}
+
+.second-text {
+    animation-name: introText;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-out;
+}
+
+.emphatic-word {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.article-div {
+    background-color: var(--text-color);
+    max-width: 100%;
+}
+
+article {
+    font-family: "Rubik", sans-serif;
+    font-size: 2vh;
+    background-color: var(--text-color);
+    color: var(--main-color);
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding: 15px;
+}
+
+#picture-section {
+    background-color: var(--main-color);
+    display: grid;
+    align-items: center;
+    gap: 15px;
+    grid-template-columns: auto auto;
+    margin: auto;
+    height: 100%;
+    max-width: 1000px;
+    padding: 15px;
+}
+
+#picture-section img {
+    background-color: var(--accent-color);
+    border: 5px solid var(--text-color);
+    height: inherit;
+    max-width: 100%;
+    padding: 5px;
+    object-fit: cover;
+}
+
+/*
+Music page styles
+*/
+
+/*
+Dance page styles
+*/
+
+/*
+Design page styles
+*/
+
+@media screen and (max-width: 1100px) {
+    #nav-logo1 {
+        width: 110px;
+    }
+
+    nav {
+        width: 110px;
+    }
+
+    nav a {
+        font-size: 22px;
+    }
+
+    #home-section,
+    #about-section,
+    #music-section,
+    #dance-section,
+    #design-section {
+        margin-left: 110px;
+        left: 110px;
+    }
+
+    #links-section {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #design-section h1 {
+        font-size: 6vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #home-section h1 {
+        font-size: 8vw;
+    }
+    
+    #music-section h1,
+    #dance-section h1 {
+        font-size: 6vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #about-section h1 {
+        font-size: 8vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        display: flex;
+    }
+
+    #nav-logo1 {
+        width: 70px;
+    }
+
+    #nav-logo2 {
+        width: 70px;
+        padding: 5px;
+    }
+
+    nav {
+        width: 100vw;
+        height: 75px;
+        position: fixed;
+    }
+
+    ul {
+        width: 100%;
+        display: grid;
+        grid-column-start: 3;
+        grid-column-end: 2;
+        grid-template-columns: 70px auto auto;
+    }
+
+    li {
+        text-align: center; 
+    }
+
+    #image-logo {
+        grid-row: 1 / span 2;
+    }
+
+    nav a {
+        padding: 5px;
+    }
+
+    #home-section {
+        margin-left: 0;
+    }
+
+    #home-section h1 {
+        font-size: 5vh;
+        padding-top: 10%;
+        line-height: 1;
+    }
+
+    #about-section,
+    #music-section,
+    #dance-section,
+    #design-section {
+        margin-left: 0;
+        padding-top: 75px;
+    }
+
+    #about-section h1 {
+        font-size: 10vw;
+    }
+
+    #music-section h1, 
+    #dance-section h1 {
+        font-size: 8vw;
+    }
+
+    #design-section h1 {
+        font-size: 7vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #home-section h1,
+    #about-section h1,
+    #dance-section h1 {
+        font-size: 10vw;
+    }
+
+    #dance-section h1 {
+        font-size: 8vw;
+    }
+}
