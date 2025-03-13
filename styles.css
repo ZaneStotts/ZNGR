@@ -229,7 +229,43 @@ article a:link {
 
 #picture-section img:hover {
     border: 5px solid var(--accent-color);
+    cursor: pointer;
     transform: scale(1.02);
+}
+
+#big-picture {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    padding: 50px 15px 100px 15px;
+    z-index: 1;
+}
+
+#x-button {
+    color: var(--accent-color);
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transition: 0.2s;
+}
+
+#x-button:hover {
+    color: var(--main-color);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.style-picture {
+    display: block;
+    margin: 0 auto 0 auto;
+    max-width: 500px;
+    width: 100%;
 }
 
 /*
@@ -265,6 +301,7 @@ Design page styles
     color: var(--text-color);
     font-family: "Rubik", sans-serif;
     font-size: 4vh;
+    font-weight: 500;
     letter-spacing: 1px;
     text-decoration: none;
 }
@@ -278,8 +315,13 @@ Design page styles
     font-family: "Rubik", sans-serif;
     font-size: 2vh;
     letter-spacing: 1px;
+    line-height: 1.3;
     padding: 5px 15px 5px 15px;
 }
+
+/*
+Media queries
+*/
 
 @media screen and (max-width: 1100px) {
     #nav-logo1 {
@@ -431,19 +473,3 @@ Design page styles
         font-size: 8vw;
     }
 }
-
-/*
-About page media queries
-*/
-
-/*
-Music page media queries
-*/
-
-/*
-Dance page media queries
-*/
-
-/*
-Design page media queries
-*/
