@@ -4,7 +4,7 @@ About page
 
 const bigPicture = document.getElementById("big-picture");
 
-const xButton = document.getElementById("x-button")[0];
+const xButton = document.getElementById("x-button");
 
 const allPictures = document.getElementsByTagName("img");
 

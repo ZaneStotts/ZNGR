@@ -46,6 +46,7 @@ nav {
     width: 10%;
     height: 100vh;
     position: fixed;
+    z-index: 1;
 }
 
 ul {
@@ -106,7 +107,7 @@ nav a:hover {
 #choreographer-text {
     animation-name: introText;
     animation-duration: 2s;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-fill-mode: backwards;
     animation-timing-function: ease-out;
 }
@@ -114,7 +115,7 @@ nav a:hover {
 #web-designer-text {
     animation-name: introText;
     animation-duration: 2s;
-    animation-delay: 4s;
+    animation-delay: 2s;
     animation-fill-mode: backwards;
     animation-timing-function: ease-out;
 }
@@ -137,10 +138,18 @@ nav a:hover {
     align-content: center;
 }
 
+#links-div {
+    background-color: var(--main-color);
+    max-width: 100%;
+    height: 50vh;
+    padding: 0 10px 10px 10px;
+}
+
 #links-section {
+    border-radius: 10px;
     background-color: var(--text-color);
     display: flex;
-    height: 50vh;
+    height: 100%;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -164,6 +173,7 @@ About page styles
 #dance-section,
 #design-section {
     margin-left: 10%;
+    padding: 0 10px 0 10px;
 }
 
 .first-text {
@@ -177,7 +187,7 @@ About page styles
 .second-text {
     animation-name: introText;
     animation-duration: 2s;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-fill-mode: backwards;
     animation-timing-function: ease-out;
 }
@@ -189,10 +199,12 @@ About page styles
 
 .article-div {
     background-color: var(--text-color);
+    border-radius: 10px;
     max-width: 100%;
 }
 
 article {
+    border-radius: 10px;
     font-family: "Rubik", sans-serif;
     font-size: 2vh;
     background-color: var(--text-color);
@@ -203,7 +215,7 @@ article {
     margin-left: auto;
     margin-right: auto;
     max-width: 1100px;
-    padding: 15px;
+    padding: 15px 15px 15px 15px;
 }
 
 article a:link {
@@ -212,16 +224,17 @@ article a:link {
 
 #picture-section {
     display: grid;
-    gap: 15px;
+    gap: 10px;
     grid-template-columns: auto auto auto auto;
     justify-content: space-between;
     margin: 0 auto 0 auto;
     max-width: 1110px;
-    padding: 15px;
+    padding: 15px 0 15px 0;
 }
 
 #picture-section img {
     border: 5px solid var(--text-color);
+    border-radius: 10px;
     height: auto;
     max-width: 100%;
     transition: 0.2s;
@@ -240,18 +253,18 @@ article a:link {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    overflow: auto;
-    padding: 50px 15px 100px 15px;
-    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+    padding: 90px 50px 50px 50px;
+    z-index: 2;
 }
 
 #x-button {
     color: var(--accent-color);
     display: block;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
     transition: 0.2s;
 }
 
@@ -262,10 +275,27 @@ article a:link {
 }
 
 .style-picture {
-    display: block;
+    animation-name: enlargePicture;
+    animation-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    border: 5px solid var(--accent-color);
+    border-radius: 10px;
     margin: 0 auto 0 auto;
-    max-width: 500px;
+    max-width: 600px;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+}
+
+@keyframes enlargePicture {
+    0% {
+        transform: scale(0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /*
@@ -353,6 +383,10 @@ Media queries
     #picture-section {
         grid-template-columns: auto auto auto;
     }
+
+    #big-picture {
+        padding: 90px 40px 40px 40px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -362,6 +396,10 @@ Media queries
 
     #picture-section {
         grid-template-columns: auto auto;
+    }
+
+    #big-picture {
+        padding: 90px 40px 40px 40px;
     }
 }
 
@@ -374,6 +412,10 @@ Media queries
     #dance-section h1 {
         font-size: 6vw;
     }
+
+    #big-picture {
+        padding: 90px 30px 30px 30px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -383,6 +425,10 @@ Media queries
 
     #picture-section {
         grid-template-columns: auto;
+    }
+
+    #big-picture {
+        padding: 90px 20px 20px 20px;
     }
 }
 
