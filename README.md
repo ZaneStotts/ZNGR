@@ -9,7 +9,7 @@ This website is intended to be an environment to share and display my skills for
 
 ## Languages
 
-My project is constructed from primarily HTML and a lot of CSS styling, as those two languages are the ones I'm most comfortable with right now.
+My project is constructed from primarily HTML and a lot of CSS styling, as those two languages are the ones I'm most comfortable with right now. I also threw in a little dash of JavaScript to make the picture viewing functions. 
 
 ## Design
 
@@ -17,4 +17,4 @@ I aimed for a minimal aesthetic scheme while maintaining a responsive layout. Di
 
 ## Reflections
 
-This programming venture has helped me learn in more depth the ways in which HTML functions, such as the box model and what tags to use in order to better structure a website. Also discovered more when it comes to CSS, such as flex box tricks and grid arrangements. I'm very certain this new knowledge will be beneficial to me in the future.
+This programming venture has helped me learn in more depth the ways in which HTML functions, such as the box model and what tags to use in order to better structure a website. Also discovered more when it comes to CSS, such as flex box tricks and grid arrangements. I'm very certain this new knowledge will be beneficial to me in the future. I'm proud of my progress.

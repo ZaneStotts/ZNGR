@@ -35,6 +35,7 @@ Home page styles
     left: 0;
     padding: 10px;
     opacity: 0;
+    transition: 0.2s;
 }
 
 #nav-logo2:hover {
@@ -47,6 +48,7 @@ nav {
     height: 100vh;
     position: fixed;
     z-index: 1;
+    margin: 15px;
 }
 
 ul {
@@ -63,13 +65,15 @@ nav a {
     color: var(--text-color);
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.7px;
     display: block;
     padding: 10px;
+    transition: 0.2s;
 }
 
 nav a:hover {
     background-color: var(--text-color);
+    border-radius: 10px;
     color: var(--main-color);
 }
 
@@ -142,7 +146,7 @@ nav a:hover {
     background-color: var(--main-color);
     max-width: 100%;
     height: 50vh;
-    padding: 0 10px 10px 10px;
+    padding: 0 15px 15px 15px;
 }
 
 #links-section {
@@ -173,7 +177,7 @@ About page styles
 #dance-section,
 #design-section {
     margin-left: 10%;
-    padding: 0 10px 0 10px;
+    padding: 0 15px 0 30px;
 }
 
 .first-text {
@@ -224,7 +228,7 @@ article a:link {
 
 #picture-section {
     display: grid;
-    gap: 10px;
+    gap: 15px;
     grid-template-columns: auto auto auto auto;
     justify-content: space-between;
     margin: 0 auto 0 auto;
@@ -311,7 +315,7 @@ Music page styles
     display: block;
     margin: 0 auto 0 auto;
     max-width: 1100px;
-    padding: 15px;
+    padding: 15px 10px 0 10px;
 }
 
 /*
@@ -420,7 +424,7 @@ Media queries
 
 @media screen and (max-width: 600px) {
     #about-section h1 {
-        font-size: 8vw;
+        font-size: 7vw;
     }
 
     #picture-section {
@@ -448,8 +452,11 @@ Media queries
 
     nav {
         width: 100vw;
-        height: 75px;
+        height: auto;
         position: fixed;
+        border: 15px solid var(--main-color);
+        top: -15px;
+        left: -15px;
     }
 
     ul {
@@ -482,6 +489,10 @@ Media queries
         line-height: 1;
     }
 
+    #intro-section {
+        padding-top: 5%;
+    }
+
     #links-section {
         justify-content: space-around;
     }
@@ -491,7 +502,7 @@ Media queries
     #dance-section,
     #design-section {
         margin-left: 0;
-        padding-top: 75px;
+        padding: 100px 15px 0 15px;
     }
 
     #about-section h1 {
