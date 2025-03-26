@@ -6,7 +6,7 @@ const bigPicture = document.getElementById("big-picture");
 
 const xButton = document.getElementById("x-button");
 
-const allPictures = document.getElementsByTagName("img");
+const allPictures = document.getElementsByClassName("portrait");
 
 let selectedPicture = document.getElementById("selected-picture");
 
@@ -21,7 +21,3 @@ for (i = 0; i < allPictures.length; i++) {
 xButton.addEventListener ("click", function() {
     bigPicture.style.display = "none";
 })
-
-/*
-Design page
-*/
