@@ -312,6 +312,7 @@ Music page styles
 
 #audio-section {
     background-color: var(--main-color);
+    padding: 0 0 15px 0;
 }
 
 #audio-section iframe {
