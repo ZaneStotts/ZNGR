@@ -1,5 +1,7 @@
 # ZNGR
-### Music Producer, Choreographer, Web Designer
+### Music producer
+### Choreographer
+### Web Designer
 
 Created by Zane Stotts
 
